@@ -11,6 +11,7 @@
 # Sources:
 #   - https://social.technet.microsoft.com/wiki/contents/articles/52251.manage-windows-defender-using-powershell.aspx
 #   - https://www.windowscentral.com/how-manage-microsoft-defender-antivirus-powershell-windows-10
+#   - https://docs.microsoft.com/en-us/powershell/module/defender/set-mppreference?view=windowsserver2019-ps
 
 - name: "Install Windows Defender feature"
   ansible.windows.win_feature:
@@ -24,6 +25,7 @@
 - name: "Enable realtime scanning"
 
 - name: "Exclude file type(s)"
+  ansible.windows.win_shell: "Set-MpPreference -ExclusionExtension {{ ExclusionExtension }}"
 
 - name: "Schedule full scan"
   ansible.windows.win_shell: "Set-MpPreference -ScanParameters {{ ScanParameters }} -RemediationScheduleDay {{ RemediationScheduleDay }} -RemediationScheduleTime {{ RemediationScheduleTime }}"
