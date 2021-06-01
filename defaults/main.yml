@@ -1,0 +1,25 @@
+---
+#
+# Title: role-microsoft-defender
+# 
+# Author: Bitfinity-NL
+# File: defaults/main.yml
+#
+# Description:
+#   Providing a standard Windows Security pack.
+
+
+
+
+
+# -- Default: schedule scan settings --
+#
+# Variabel(s):
+#   ScanParameters          : '2'      # Set full(2) or quickscan(1), default=2.
+#   RemediationScheduleDay  : '0'      # Set the scan-day, default=0 (Every Day).
+#   RemediationScheduleTime : '01:00'  # Set time when full or quick scan will run, default=01.00u. 
+#
+ScanParameters          : '2'
+RemediationScheduleDay  : '0'
+RemediationScheduleTime : '01:00'
+
