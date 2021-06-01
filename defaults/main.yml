@@ -9,7 +9,14 @@
 #   Providing a standard Windows Security pack.
 
 
-
+# -- Default Exclusion settings --
+#
+# Variable(s):
+#   ExclusionExtension : 'mdf,ldf'  #
+#   ExclusionPath      : ''  #
+#
+ExclusionExtension : ''
+ExclusionPath      : ''
 
 
 # -- Default: schedule scan settings --
