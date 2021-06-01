@@ -1,0 +1,25 @@
+---
+#
+# Title: role-microsoft-defender
+# 
+# Author: Bitfinity-NL
+# File: tasks/main.yml
+#
+# Description:
+#   Providing a standard Windows Security pack.
+#
+# Sources:
+#   - https://social.technet.microsoft.com/wiki/contents/articles/52251.manage-windows-defender-using-powershell.aspx
+# 
+
+- name: "Install Windows Defender feature"
+  ansible.windows.win_feature:
+    name: 
+    - Windows-Defender
+    state: present
+
+- name: "Update status"
+  ansible.windows.win_shell: Update-MpSignature
+
+- name: "Enable realtime scanning"
+  
