@@ -15,7 +15,7 @@
 #   ExclusionExtension : 'mdf,ldf'  #
 #   ExclusionPath      : ''  #
 #
-ExclusionExtension : ''
+ExclusionExtension : 'mdf,ldf'
 ExclusionPath      : ''
 
 
