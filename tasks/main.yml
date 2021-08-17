@@ -26,7 +26,6 @@
 
 - name: "Exclude file type(s)"
   win_shell: "Set-MpPreference -ExclusionExtension {{ ExclusionExtension }}"
-  when: ExclusionExtension >= '' 
 
 - name: "Schedule full scan"
   win_shell: "Set-MpPreference -ScanParameters {{ ScanParameters }} -RemediationScheduleDay {{ RemediationScheduleDay }} -RemediationScheduleTime {{ RemediationScheduleTime }}"
