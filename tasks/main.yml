@@ -14,7 +14,7 @@
 #   - https://docs.microsoft.com/en-us/powershell/module/defender/set-mppreference?view=windowsserver2019-ps
 
 - name: "Install Windows Defender feature"
-  ansible.windows.win_feature:
+  win_feature:
     name: 
     - Windows-Defender
     state: present
