@@ -22,8 +22,9 @@
 - name: "Update status"
   win_shell: Update-MpSignature
   
-#- name: "Enable realtime scanning"
-
+- name: "Enable realtime scanning"
+  win_shell: "Set-MpPreference -DisableRealtimeMonitoring $false"
+  
 - name: "Exclude file type(s)"
   win_shell: "Set-MpPreference -ExclusionExtension {{ ExclusionExtension }}"
 
