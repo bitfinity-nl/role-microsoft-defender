@@ -20,16 +20,16 @@
     state: present
 
 - name: "Update status"
-  ansible.windows.win_shell: Update-MpSignature
+  win_shell: Update-MpSignature
   
 #- name: "Enable realtime scanning"
 
 - name: "Exclude file type(s)"
-  ansible.windows.win_shell: "Set-MpPreference -ExclusionExtension {{ ExclusionExtension }}"
+  win_shell: "Set-MpPreference -ExclusionExtension {{ ExclusionExtension }}"
 
 - name: "Schedule full scan"
-  ansible.windows.win_shell: "Set-MpPreference -ScanParameters {{ ScanParameters }} -RemediationScheduleDay {{ RemediationScheduleDay }} -RemediationScheduleTime {{ RemediationScheduleTime }}"
+  win_shell: "Set-MpPreference -ScanParameters {{ ScanParameters }} -RemediationScheduleDay {{ RemediationScheduleDay }} -RemediationScheduleTime {{ RemediationScheduleTime }}"
 
 - name: "Execute quickscan"
-  ansible.windows.win_shell: Start-MpScan -ScanType QuickScan
+  win_shell: Start-MpScan -ScanType QuickScan
 
