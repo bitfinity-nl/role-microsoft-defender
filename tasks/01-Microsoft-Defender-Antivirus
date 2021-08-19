@@ -1,0 +1,6 @@
+--- 
+# Microsoft Defender Antivirus
+
+# Check status of Microsoft Antivirus Realtime Monitoring (True=Disabled, False=Enabled)
+Get-MpPreference | Select-Object -ExpandProperty DisableRealtimeMonitoring
+
