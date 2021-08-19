@@ -17,7 +17,7 @@
   win_feature:
     name: 
     - Windows-Defender
-    - Windows-Defender-GUI
+    #- Windows-Defender-GUI
     state: present
 
 - name: "Update status"
