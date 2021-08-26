@@ -1,2 +1,4 @@
 ---
 
+# Check if firewall is enabl
+Get-NetFirewallProfile -name Domain | Select-Object -ExpandProperty Enabled
